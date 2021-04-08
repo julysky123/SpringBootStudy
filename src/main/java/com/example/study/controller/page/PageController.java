@@ -15,7 +15,7 @@ public class PageController {
 
     @RequestMapping(path = {""})
     public ModelAndView index() {
-        return new ModelAndView("/pages/main")
+        return new ModelAndView("pages/main")
                 .addObject("menuList", adminMenuService.getAdminMenu())
                 .addObject("code", "main")
                 ;
@@ -23,7 +23,7 @@ public class PageController {
 
     @RequestMapping("/user")
     public ModelAndView user() {
-        return new ModelAndView("/pages/user")
+        return new ModelAndView("pages/user")
                 .addObject("menuList", adminMenuService.getAdminMenu())
                 .addObject("code", "user")
                 ;
